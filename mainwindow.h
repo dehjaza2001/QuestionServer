@@ -67,6 +67,8 @@ private slots:
     void waitForAnswer();
     void startServer();
     void newRound();
+    void iniStatus();
+    void on_lineEdit_returnPressed();
 
 private:
     Ui::MainWindow *ui;
@@ -76,6 +78,7 @@ private:
     std::map<QTcpSocket*, bool> isDead;
     std::map<QTcpSocket*, QString> nameMap;
     int players;
+    int totalPlayers;
     int numDead;
     int inTurn;
     int currQuestion;

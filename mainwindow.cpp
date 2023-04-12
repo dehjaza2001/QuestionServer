@@ -7,13 +7,14 @@ MainWindow::MainWindow(QWidget *parent)
 {
 
     ui->setupUi(this);
-    nQuestion = 3;
-    question = generateQuestions(QString("C:/Users/Luong Thien Tri/Documents/QuestionServer/questions.txt"),nQuestion);
+//    nQuestion = totalPlayers;
+//    question = generateQuestions(QString("C:/Users/Luong Thien Tri/Documents/QuestionServer/questions.txt"),nQuestion);
     players = 0;
     numDead = 0;
     inTurn = 0;
     currQuestion = 0;
-    startServer();
+    ui->textBrowser->append(QString("Please input number of players:"));
+   // startServer();
 }
 
 MainWindow::~MainWindow()
@@ -165,7 +166,7 @@ void MainWindow::checkName(QTcpSocket *socket, const QString &playername){
        nameMap[socket] = playername;
        auto it = std::find(connection_set.begin(), connection_set.end(), socket);
        int id = distance(connection_set.begin(), it);
-       sendMessage(socket,QString("OK;%1").arg(id + 1),QString("message"));
+       sendMessage(socket,QString("OK;%1;%2").arg(id + 1).arg(nQuestion),QString("message"));
        for (const auto& [key, value] : nameMap) {
               qDebug() << key << " : " << value;
           }
@@ -259,14 +260,23 @@ void MainWindow::sendMessageToAll(QString str, QString fileType)
 
 void MainWindow::gameplay()
 {
+    if(connection_set.size() == 1 || connection_set.size() != nameMap.size() || players < totalPlayers){
+        QMessageBox::warning(this,"Invalid","Can start the game now");
+        return;
+    }
+
     ui->startButton->setDisabled(true);
     sendMessageToAll(QString("go"),QString("start"));
-    updateStatus();
+    iniStatus();
     //
-    while(currQuestion < nQuestion && numDead < players){
+    while(currQuestion < nQuestion){
         for(int i = 0 ; i < connection_set.size() ; i++){
+            if(numDead == players - 1){
+                emit goOutQuestion();
+                return;
+            }
             if(!isDead[connection_set[i]]){
-                inTurn = i;
+                inTurn = i + 1;
                 QString ques = question[currQuestion].split(";")[0];
                 sendMessage(connection_set[i],ques,QString("question"));
                 displayMessage(QString("Sent question %1 : %2").arg(currQuestion).arg(ques));
@@ -276,17 +286,6 @@ void MainWindow::gameplay()
         }
         currQuestion++;
         qDebug() << "current question" << currQuestion;
-//        if(inTurn == players){
-//            inTurn = 0;
-//            currQuestion++;
-//            qDebug() << "update question";
-//        }
-
-//        QString ques = question[currQuestion].split(";")[0];
-//        sendMessage(connection_set[inTurn],ques,QString("question"));
-//        displayMessage(QString("Sent question %1 : %2").arg(currQuestion).arg(ques));
-//        // wait for answer
-//        waitForAnswer();
     }
     qDebug() << "out of question";
     emit goOutQuestion();
@@ -350,7 +349,7 @@ void MainWindow::updateStatus()
         QTcpSocket* socket = connection_set[i];
         if(isDead[socket]){
              message += QString("%2.<s>Player: %1</s> <br>").arg(nameMap[socket]).arg(i+1);
-        } else if (i == ((inTurn + 1) % players)){
+        } else if (i == (inTurn % players)){
             message += QString("%2.Player: %1 (in turn) <br>").arg(nameMap[socket]).arg(i+1);
         } else {
             message += QString("%2.Player: %1 <br>").arg(nameMap[socket]).arg(i+1);
@@ -363,4 +362,36 @@ void MainWindow::updateStatus()
     qDebug() << "after signal";
 }
 
+void MainWindow::iniStatus()
+{
+    // sort the vector by value
+
+    QString message = "";
+
+    for(int i = 0 ; i < connection_set.size(); i++){
+        QTcpSocket* socket = connection_set[i];
+        if (i == 0){
+            message += QString("%2.Player: %1 (in turn) <br>").arg(nameMap[socket]).arg(i+1);
+        } else {
+            message += QString("%2.Player: %1 <br>").arg(nameMap[socket]).arg(i+1);
+        }
+    }
+
+    qDebug ()<< message;
+    sendMessageToAll(message, QString("status"));
+    emit continueSend();
+    qDebug() << "after signal";
+}
+
+
+
+void MainWindow::on_lineEdit_returnPressed()
+{
+    totalPlayers = ui->lineEdit->text().toInt();
+    ui->textBrowser->append(QString("Wait for %1 players to connect").arg(totalPlayers));
+    nQuestion = totalPlayers * 3;
+    ui->textBrowser->append(QString("There are %1 question in this set").arg(nQuestion));
+    question = generateQuestions(QString("C:/Users/Luong Thien Tri/Documents/QuestionServer/questions.txt"),nQuestion);
+    startServer();
+}
 
