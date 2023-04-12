@@ -1,0 +1,20 @@
+What is the capital of France?\nA. Paris\nB. London\nC. Berlin\nD. Rome;A
+What is the largest continent?\nA. Africa\nB. Asia\nC. Europe\nD. South America;B
+Who invented the telephone?\nA. Thomas Edison\nB. Alexander Graham Bell\nC. Isaac Newton\nD. Albert Einstein;B
+What is the currency of Japan?\nA. Yen\nB. Euro\nC. Dollar\nD. Pound Sterling;A
+What is the largest country in the world by land area?\nA. United States\nB. Russia\nC. Canada\nD. China;B
+What is the smallest country in the world?\nA. Monaco\nB. Vatican City\nC. San Marino\nD. Liechtenstein;B
+What is the highest mountain in the world?\nA. Mount Everest\nB. Mount Kilimanjaro\nC. Mount Fuji\nD. Mount Rainier;A
+What is the largest ocean in the world?\nA. Atlantic Ocean\nB. Indian Ocean\nC. Pacific Ocean\nD. Arctic Ocean;C
+What is the main language spoken in Brazil?\nA. Portuguese\nB. Spanish\nC. French\nD. Italian;A
+Who was the first person to walk on the moon?\nA. Neil Armstrong\nB. Buzz Aldrin\nC. Yuri Gagarin\nD. Alan Shepard;A
+What is the chemical symbol for gold?\nA. Ag\nB. Cu\nC. Fe\nD. Au;D
+Who painted the Mona Lisa?\nA. Leonardo da Vinci\nB. Vincent van Gogh\nC. Pablo Picasso\nD. Claude Monet;A
+What is the highest waterfall in the world?\nA. Angel Falls\nB. Niagara Falls\nC. Victoria Falls\nD. Iguazu Falls;A
+What is the longest river in the world?\nA. Nile\nB. Amazon\nC. Mississippi\nD. Yangtze;A
+What is the highest peak in North America?\nA. Mount Denali\nB. Mount Logan\nC. Mount Saint Elias\nD. Mount Foraker;A
+What is the largest lake in Africa?\nA. Lake Victoria\nB. Lake Tanganyika\nC. Lake Malawi\nD. Lake Chad;A
+What is the capital of Spain?\nA. Barcelona\nB. Madrid\nC. Seville\nD. Valencia;B
+Who wrote the novel 1984?\nA. George Orwell\nB. Ernest Hemingway\nC. William Faulkner\nD. F. Scott Fitzgerald;A
+What is the chemical symbol for oxygen?\nA. O\nB. H\nC. C\nD. N;A
+What is the largest desert in the world?\nA. Sahara\nB. Gobi\nC. Kalahari\nD. Arabian;A

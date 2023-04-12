@@ -1,0 +1,20 @@
+What is the capital of France?  <br>  A. Paris  <br>  B. London  <br>  C. Berlin  <br>  D. Rome;A
+What is the largest continent?  <br>  A. Africa  <br>  B. Asia  <br>  C. Europe  <br>  D. South America;B
+Who invented the telephone?  <br>  A. Thomas Edison <br> B. Alexander Graham Bell <br> C. Isaac Newton <br> D. Albert Einstein;B
+What is the currency of Japan? <br> A. Yen <br> B. Euro <br> C. Dollar <br> D. Pound Sterling;A
+What is the largest country in the world by land area? <br> A. United States <br> B. Russia <br> C. Canada <br> D. China;B
+What is the smallest country in the world? <br> A. Monaco <br> B. Vatican City <br> C. San Marino <br> D. Liechtenstein;B
+What is the highest mountain in the world? <br> A. Mount Everest <br> B. Mount Kilimanjaro <br> C. Mount Fuji <br> D. Mount Rainier;A
+What is the largest ocean in the world? <br> A. Atlantic Ocean <br> B. Indian Ocean <br> C. Pacific Ocean <br> D. Arctic Ocean;C
+What is the main language spoken in Brazil? <br> A. Portuguese <br> B. Spanish <br> C. French <br> D. Italian;A
+Who was the first person to walk on the moon? <br> A. Neil Armstrong <br> B. Buzz Aldrin <br> C. Yuri Gagarin <br> D. Alan Shepard;A
+What is the chemical symbol for gold? <br> A. Ag <br> B. Cu <br> C. Fe <br> D. Au;D
+Who painted the Mona Lisa? <br> A. Leonardo da Vinci <br> B. Vincent van Gogh <br> C. Pablo Picasso <br> D. Claude Monet;A
+What is the highest waterfall in the world? <br> A. Angel Falls <br> B. Niagara Falls <br> C. Victoria Falls <br> D. Iguazu Falls;A
+What is the longest river in the world? <br> A. Nile <br> B. Amazon <br> C. Mississippi <br> D. Yangtze;A
+What is the highest peak in North America? <br> A. Mount Denali <br> B. Mount Logan <br> C. Mount Saint Elias <br> D. Mount Foraker;A
+What is the largest lake in Africa? <br> A. Lake Victoria <br> B. Lake Tanganyika <br> C. Lake Malawi <br> D. Lake Chad;A
+What is the capital of Spain? <br> A. Barcelona <br> B. Madrid <br> C. Seville <br> D. Valencia;B
+Who wrote the novel 1984? <br> A. George Orwell <br> B. Ernest Hemingway <br> C. William Faulkner <br> D. F. Scott Fitzgerald;A
+What is the chemical symbol for oxygen? <br> A. O <br> B. H <br> C. C <br> D. N;A
+What is the largest desert in the world? <br> A. Sahara <br> B. Gobi <br> C. Kalahari <br> D. Arabian;A
